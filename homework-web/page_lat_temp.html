@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>WeatherPy</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/weatherpy.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">WeatherPy</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="active"><a href="page_lat_temp.html">Latitude vs Max Temperature</a></li>
+                <li><a href="page_lat_humi.html">Latitude vs Humidity</a></li>
+                <li><a href="page_lat_clou.html">Latitude vs Cloudiness</a></li>
+                <li><a href="page_lat_wind.html">Latitude vs Wind Speed</a></li>
+              </ul>
+            </li>
+            <li><a href="page_comparisons.html">Comparison</a></li>
+            <li><a href="page_data.html">Data</a></li>
+          </ul>
+        </div>
+
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="visual col-md-8 col-sm-12">
+        <h2 class="text-center">Summary: Latitude vs Max Temperature</h2>
+        <hr>
+        <img src="Images/Fig1.png" width=500px class="img-fluid center-block">
+        <p>As expected, the temperature becomes significantly higher for latitudes close to the equator. We can also observe that the temperatures are significantly lower on the north hemisphere (positive latitudes). This is also expected given the data was taken on January 2017 (winter in north hemisphere). What is more interesting is that there is a low variance of temperatures for latitudes between -20 and 20, which evidences the fact it is summer all year long in regions close to the equator.</p>
+      </div>
+      <div class="col-md-4">
+        <h2 class="text-center">Visualizations</h2>
+        <hr>
+        <a href="page_lat_temp.html"><img src="Images/Fig1.png" width=140px class="img-fluid selection"></a>
+        <a href="page_lat_humi.html"><img src="Images/Fig2.png" width=140px class="img-fluid"></a>
+        <a href="page_lat_clou.html"><img src="Images/Fig3.png" width=140px class="img-fluid"></a>
+        <a href="page_lat_wind.html"><img src="Images/Fig4.png" width=140px class="img-fluid"></a>
+      </div>
+    </div>
+        
+    <br>
+    <hr>
+  
+    <footer>
+      <p>&copy; 2018 Data Science Bootcamp at Northwestern University</p>
+    </footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  
+</body>
+</html>

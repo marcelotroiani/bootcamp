@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>WeatherPy</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">WeatherPy</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="page_comparisons.html">Comparison</a></li>
+            <li><a href="page_data.html">Data</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="page_lat_temp.html">Latitude vs Max Temperature</a></li>
+                <li><a href="page_lat_humi.html">Latitude vs Humidity</a></li>
+                <li><a href="page_lat_clou.html">Latitude vs Cloudiness</a></li>
+                <li><a href="page_lat_wind.html">Latitude vs Wind Speed</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+    </div>
+  </nav>
+
+  <div class="container">
+
+      <div class="col-md-12">
+          <img src="Images/Fig1.png" width=50% class="pull-left img-fluid">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste molestiae aliquam optio mollitia, unde quas eaque voluptatem dignissimos eos maiores magni reprehenderit nisi, corrupti nemo hic id cum quasi officiis!</p>
+          </div>
+
+    <div class="jumbotron">
+      <h2>WeatherPy</h2>
+      <hr>
+      <img src="Images/Fig1.png" alt="lat_temp">
+      <p>The objective of the analysis is to answer one question: "What's the weather like as we approach the equator?" The approach taken to answer the question is to analyze the following relationships:</p>
+      <ul>
+        <li>Temperature (F) vs. Latitude</li>
+        <li>Humidity (%) vs. Latitude</li>
+        <li>Cloudiness (%) vs. Latitude</li>
+        <li>Wind Speed (mph) vs. Latitude  </li>
+      </ul>
+    </div>
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-3">
+        <div class="thumbnail">
+          <img src="Images/Fig1.png" alt="lat_temp">
+          <div class="caption text-center">
+            <h4>Latitude vs Temperature</h4>
+            <p><a href="page_lat_temp.html" class="btn btn-primary" role="button">View details</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="thumbnail">
+          <img src="Images/Fig2.png" alt="lat_temp">
+          <div class="caption text-center">
+            <h4>Latitude vs Humidity</h4>
+            <p><a href="page_lat_humi.html" class="btn btn-primary" role="button">View details</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="thumbnail">
+          <img src="Images/Fig3.png" alt="lat_temp">
+          <div class="caption text-center">
+            <h4>Latitude vs Cloudiness</h4>
+            <p><a href="page_lat_clou.html" class="btn btn-primary" role="button">View details</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="thumbnail">
+          <img src="Images/Fig4.png" alt="lat_temp">
+          <div class="caption text-center">
+            <h4>Latitude vs Wind Speed</h4>
+            <p><a href="page_lat_wind.html" class="btn btn-primary" role="button">View details</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <footer>
+      <p>&copy; 2018 Data Science Bootcamp at Northwestern University</p>
+    </footer>
+  </div> <!-- /container -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
