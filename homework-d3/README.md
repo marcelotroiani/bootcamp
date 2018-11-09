@@ -1,0 +1,3 @@
+# Assignment - Data Journalism and D3
+
+In this analysis, we have explored the associations between demographics (poverty, age and income) and behavioral risk factors (lack of healthcare, obesity and smoking). The survey data was collected from the American Community Survey (ACS) and the Behavioral Risk Factor Surveillance System (BRFSS) in 2014. Each marker represents an individual state in the United States. Click on the labels to change the information being explored!
