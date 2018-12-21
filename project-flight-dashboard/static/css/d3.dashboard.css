@@ -1,0 +1,69 @@
+//Helped resolve an earlier line chart issue.
+//May no longer be necessary.      -John
+/* body{
+    width:1060px;
+    margin:50px auto;
+} */
+
+path:hover {
+    opacity:0.5;
+}
+
+rect:hover { 
+    opacity:0.5;
+}
+
+.axis { 
+    font: 10px sans-serif;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: rgb(199, 199, 199);
+    shape-rendering: crispEdges;
+}
+
+.y.axis path { 
+    display: none;
+}
+
+.y.axis text, .x.axis text { 
+    fill: rgb(199, 199, 199);
+}
+
+.bar--positive {
+    fill: #00ff00;
+}
+  
+.bar--negative {
+    fill: #ff00ba;
+}
+
+.arc text {
+    font: 10px sans-serif;
+    font-weight: bold;
+    text-anchor: middle;
+    fill: rgb(199, 199, 199);
+}
+  
+.arc path {
+    stroke: rgb(30, 30, 30);
+}
+
+.d3-tip {
+    padding: 6px;
+    font-size: 10px;
+    line-height: 1;
+    line-height: 1.5em;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-transform: capitalize;
+    background: rgba(199, 199, 199, 0.9);
+    border-radius: 4px;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
