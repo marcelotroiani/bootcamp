@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Credit Risk Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+</head>
+<body>
+    <div class="container">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th colspan="3">Predictions Comparison</th>
+            </tr>
+            <tr>
+                <th>Model</th>
+                <th>Probability</th>
+                <th>Prediction</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Decidion Tree</td>
+                <td>{{ prob_tree }}</td>
+                <td>{{ pred_tree }}</td>
+            </tr>
+            <tr>
+                <td>Logistic Regression</td>
+                <td>{{ prob_log }}</td>
+                <td>{{ pred_log }}</td>
+            </tr>
+            <tr>
+                <td>Random Forest</td>
+                <td>{{ prob_rf }}</td>
+                <td>{{ pred_rf }}</td>
+            </tr>
+            <tr>
+                <td>Deep Learning</td>
+                <td>{{ prob_deep }}</td>
+                <td>{{ pred_deep }}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>    
+</body>
+</html>

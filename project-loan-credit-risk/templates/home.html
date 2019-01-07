@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Credit Risk Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+</head>
+
+<body>
+    <div class="container">
+        <h2>Loan Credit Risk Prediction</h2>
+        <form action = "/predict" method="POST">
+        <p> Annual Income: <input name="annualIncome" type ="text" value="50000" /> </p>
+        <p> Revolving Balance: <input name="revolvingBalance" type ="text" value="15000" /> </p>
+        <p> Loan Amount: <input name="loanAmount" type ="text" value="20000" /> </p>
+        <p> DTI Ratio: <input name="dtiRatio" type ="text" value="20" /> </p>
+        <p> Revolving Utilization: <input name="revolvingUtilizationRate" type ="text" value="50" /> </p>
+        <p> Length Credit History: <input name="lengthCreditHistory" type ="text" value="10" /> </p>
+        <p> Credit Lines Opened in Last Year: <input name="numOpenCreditLines1Year" type ="text" value="7" /> </p>
+        <p> Total Credit Lines: <input name="numTotalCreditLines" type ="text" value="15" /> </p>
+        <p> Credit Lines Open: <input name="numOpenCreditLines" type ="text" value="10" /> </p>
+        <p> Inquiries in Last 6 months: <input name="numInquiries6Mon" type ="text" value="1" /> </p>
+        <p> Derogatory Public Records: <input name="numDerogatoryRec" type ="text" value="1" /> </p>
+        <p> Delinquency in Last 2 Years: <input name="numDelinquency2Years" type ="text" value="1" /> </p>
+        <p> Chargeoff in Last Year: <input name="numChargeoff1year" type ="text" value="1" /> </p>
+        <p> <input type ="submit" value="Compare Models" /> </p>
+        </form>
+    </div>
+</body>
+
+</html>
