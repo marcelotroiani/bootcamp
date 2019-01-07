@@ -1,23 +1,27 @@
-# Flight Dashboard
+# Loan Credit Risk
 
 ## Background
 
-This dashboard is the result of the second project that is part if the Data Science Bootcamp at Northwestern University. It consists in interactive visualizations to explore flights within US from 1990 to 2009 and the database used has more than 3.5 million flight records from 650 airports in the US.
+When a financial institution examines a request for a loan, it is crucial to assess the risk of default to determine whether to grant it. This solution is based on simulated data for a small personal loan financial institution, containing the borrower's financial history as well as information about the requested loan. Several different prediction techniques were tested and results compared. A simple flask app was also created to give the predictions based on any user inputs. View more information about the data in the link below.
 
-Source: [Academic Torrents](http://academictorrents.com/details/a2ccf94bbb4af222bf8e69dad60a68a29f310d9a) 
+Source: [Loan Credit Risk](https://microsoft.github.io/r-server-loan-credit-risk/input_data.html) 
 
 ## Tools
 
-The following tools were used to create the dashboard:
-* MySQL
+The following Machine Learning and Deep Learning Techniques were considered:
+* Decision Tree
+* Random Forest
+* Logistic Regression
+* Neural Network
+
+The following tools were used for the analysis and app:
+* Pandas
+* Matplotlib
+* Sklearn
 * Python and Flask
-* HTML/CSS
+* HTML
 * Bootstrap
-* Java Script
-* D3
-* Leaflet.js
-* Google Maps API
 
-## Preview
+## Preview of Results
 
-![Dashboard](static/images/dashboard.gif)
+![Dashboard](ROC.png)
