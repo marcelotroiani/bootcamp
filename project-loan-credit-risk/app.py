@@ -15,8 +15,8 @@ def get_delay():
         result=request.form
 
         inputs = [[int(result['annualIncome']), int(result['revolvingBalance']), float(result['dtiRatio']), int(result['loanAmount']), float(result['revolvingUtilizationRate']), 
-                int(result['lengthCreditHistory']), int(result['numOpenCreditLines1Year']), int(result['numTotalCreditLines']), int(result['numOpenCreditLines']),
-                int(result['numInquiries6Mon']), int(result['numDerogatoryRec']), int(result['numDelinquency2Years']), int(result['numChargeoff1year'])]]
+                int(result['lengthCreditHistory']), int(result['numOpenCreditLines1Year']), int(result['numInquiries6Mon']), int(result['numDerogatoryRec']),
+                int(result['numChargeoff1year'])]]
         
         model_files = ['models/tree.pkl', 'models/logreg.pkl', 'models/rf.pkl', 'models/neural.pkl']
         model_names = ['Decision Tree', 'Logistic Regression', 'Random Forest', 'Neural Network']
