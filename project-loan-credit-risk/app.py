@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template
 import pickle
-from keras.models import load_model
+from keras import backend as K
 
 app = Flask(__name__)
 
@@ -31,17 +31,23 @@ def get_delay():
                         dict = {
                                 'Model': model_names[i],
                                 'Pred' : model.predict_classes(inputs_scaled)[0],
-                                'Prob' : model.predict_proba(inputs_scaled)[:,1][0]
+                                'Prob' : "{:.2%}".format(model.predict_proba(inputs_scaled)[:,1][0])
                         }
                 else:
                         dict = {
                                 'Model': model_names[i],
                                 'Pred' : model.predict(inputs)[0],
-                                'Prob' : model.predict_proba(inputs)[:,1][0]
+                                'Prob' : "{:.2%}".format(model.predict_proba(inputs)[:,1][0])
                         }
+                
+                if dict['Pred'] == 1:
+                        dict['Pred'] = "Default/Denied"
+                else:
+                        dict['Pred'] = "Approved"
 
                 outputs.append(dict)
-
+        
+        K.clear_session()
         
         return render_template('result.html', pred_tree=outputs[0]['Pred'], prob_tree=outputs[0]['Prob'], pred_log=outputs[1]['Pred'], prob_log=outputs[1]['Prob'],
                 pred_rf=outputs[2]['Pred'], prob_rf=outputs[2]['Prob'], pred_deep=outputs[3]['Pred'], prob_deep=outputs[3]['Prob'])
