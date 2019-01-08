@@ -6,40 +6,51 @@
 </head>
 <body>
     <div class="container">
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th colspan="3">Predictions Comparison</th>
-            </tr>
-            <tr>
-                <th>Model</th>
-                <th>Prediction</th>
-                <th>Probability of Default</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Decidion Tree</td>
-                <td>{{ pred_tree }}</td>
-                <td>{{ prob_tree }}</td>
-            </tr>
-            <tr>
-                <td>Logistic Regression</td>
-                <td>{{ pred_log }}</td>
-                <td>{{ prob_log }}</td>
-            </tr>
-            <tr>
-                <td>Random Forest</td>
-                <td>{{ pred_rf }}</td>
-                <td>{{ prob_rf }}</td>
-            </tr>
-            <tr>
-                <td>Deep Learning</td>
-                <td>{{ pred_deep }}</td>
-                <td>{{ prob_deep }}</td>
-            </tr>
-        </tbody>
-    </table>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th colspan="4">Predictions Comparison</th>
+                            </tr>
+                            <tr>
+                                <th>Model</th>
+                                <th>Probability of Default</th>
+                                <th>Cutoff</th>
+                                        <th>Decision</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Decidion Tree</td>
+                                <td>{{ prob_tree }}</td>
+                                <td>{{ cutoff_tree }}</td>
+                                <td>{{ pred_tree }}</td>
+                            </tr>
+                            <tr>
+                                <td>Logistic Regression</td>
+                                <td>{{ prob_log }}</td>
+                                <td>{{ cutoff_log }}</td>
+                                <td>{{ pred_log }}</td>
+                            </tr>
+                            <tr>
+                                <td>Random Forest</td>
+                                <td>{{ prob_rf }}</td>
+                                <td>{{ cutoff_rf }}</td>
+                                <td>{{ pred_rf }}</td>
+                            </tr>
+                            <tr>
+                                <td>Deep Learning</td>
+                                <td>{{ prob_deep }}</td>
+                                <td>{{ cutoff_deep }}</td>
+                                <td>{{ pred_deep }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
     </div>    
 </body>
 </html>

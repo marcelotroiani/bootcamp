@@ -20,6 +20,7 @@ def get_delay():
         
         model_files = ['models/tree.pkl', 'models/logreg.pkl', 'models/rf.pkl', 'models/neural.pkl']
         model_names = ['Decision Tree', 'Logistic Regression', 'Random Forest', 'Neural Network']
+        model_cutoff = [0.1255017393631255, 0.1273889457717706, 0.15407819276393872, 0.1804269]
         outputs = []
 
         for i in range(0, len(model_names)):
@@ -28,29 +29,28 @@ def get_delay():
                 if model_names[i] == 'Neural Network':
                         scaler = pickle.load(open('models/XScaler.pkl', 'rb'))
                         inputs_scaled = scaler.transform(inputs)
-                        dict = {
-                                'Model': model_names[i],
-                                'Pred' : model.predict_classes(inputs_scaled)[0],
-                                'Prob' : "{:.2%}".format(model.predict_proba(inputs_scaled)[:,1][0])
-                        }
+                        prob = model.predict_proba(inputs_scaled)[:,1][0]
                 else:
-                        dict = {
-                                'Model': model_names[i],
-                                'Pred' : model.predict(inputs)[0],
-                                'Prob' : "{:.2%}".format(model.predict_proba(inputs)[:,1][0])
-                        }
+                        prob = model.predict_proba(inputs)[:,1][0]
                 
-                if dict['Pred'] == 1:
-                        dict['Pred'] = "Default/Denied"
+                if prob < model_cutoff[i]:
+                        pred = "Approved"
                 else:
-                        dict['Pred'] = "Approved"
-
-                outputs.append(dict)
+                        pred = "Denied"
+                                        
+                outputs.append({
+                        'Model': model_names[i],
+                        'Pred' : pred,
+                        'Prob' : "{:.2%}".format(prob),
+                        'Cutoff' : "{:.2%}".format(model_cutoff[i])
+                })
         
         K.clear_session()
         
-        return render_template('result.html', pred_tree=outputs[0]['Pred'], prob_tree=outputs[0]['Prob'], pred_log=outputs[1]['Pred'], prob_log=outputs[1]['Prob'],
-                pred_rf=outputs[2]['Pred'], prob_rf=outputs[2]['Prob'], pred_deep=outputs[3]['Pred'], prob_deep=outputs[3]['Prob'])
+        return render_template('result.html', pred_tree=outputs[0]['Pred'], prob_tree=outputs[0]['Prob'], cutoff_tree=outputs[0]['Cutoff'],
+                pred_log=outputs[1]['Pred'], prob_log=outputs[1]['Prob'], cutoff_log=outputs[1]['Cutoff'],
+                pred_rf=outputs[2]['Pred'], prob_rf=outputs[2]['Prob'], cutoff_rf=outputs[2]['Cutoff'],
+                pred_deep=outputs[3]['Pred'], prob_deep=outputs[3]['Prob'], cutoff_deep=outputs[3]['Cutoff'])
     
 if __name__ == '__main__':
 	app.debug = True
